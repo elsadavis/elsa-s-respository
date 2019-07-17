@@ -4,14 +4,15 @@ class Node {
   String name;
   
   Node(String _name){
-    this.name = name; 
-    this.loc = new PVector(random(20, 500), random(30, 400));
+    name = _name;
+    screenLocation = new PVector(random(50, width), random(50, height - 50));
   } 
   
   void draw(){
-    fill(0); textSize(14); text(name, loc.x, loc.y);
-    fill(0, 20, 235);
-    ellipse(loc.x, loc.y, 20, 20);
+    fill(255, 200, 0);
+    ellipse(screenLocation.x, screenLocation.y, 30, 30);
+    fill(0);
+    text(name, screenLocation.x, screenLocation.y);
   }
   
 }

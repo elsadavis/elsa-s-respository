@@ -4,7 +4,12 @@ int numNodes = 7;
 
 void setup(){
   size(1200, 500);
-  nodes = new HashSet();
+  init();
+}
+
+
+void init(){
+nodes = new HashSet();
   edges = new ArrayList<Edge>();
   
   for(int i = 0; i<numNodes; i++){
@@ -26,6 +31,6 @@ void setup(){
 void draw (){
   background(255); 
   for(Edge e : edges) e.draw();
-  for(Node n : nodes) n.draw();
+  for(Node n : nodes) n.draw(); 
   
 }
